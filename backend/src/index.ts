@@ -3,7 +3,12 @@ import morgan from "morgan";
 import helmet from "helmet";
 import cors from "cors";
 
+
+import { errorHandler } from "./middleware/error_handler";
+
 import { connectToDB } from "./db/mongo";
+import { default as generationRouter } from "./routes/generation-routes";
+
 
 const app = express();
 app.use(morgan("dev"));
@@ -18,5 +23,13 @@ app.get('/', (request: Request, response: Response) => {
 });
 
 
-connectToDB();
-app.listen(port, () => console.log(`Listening on port: ${port}`));
+app.use('/', generationRouter);
+
+app.use(errorHandler);
+
+const startApp = () => {
+    connectToDB();
+    app.listen(port, () => console.log(`Listening on port: ${port}`));
+}
+
+startApp();
