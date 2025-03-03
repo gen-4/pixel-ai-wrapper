@@ -1,0 +1,32 @@
+{
+  "name": "pixel-ai-wrapper",
+  "version": "1.0.0",
+  "description": "AI wrapper to make pixel art",
+  "homepage": "https://github.com/gen-4/travel-ai-wrapper#readme",
+  "bugs": {
+    "url": "https://github.com/gen-4/pixel-ai-wrapper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gen-4/pixel-ai-wrapper.git"
+  },
+  "license": "MIT",
+  "author": "Arkwald",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsx --env-file=.env --env-file=../docker/.env --watch  src/index.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.11.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.8"
+  }
+}
