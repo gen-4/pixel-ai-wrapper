@@ -21,3 +21,9 @@ MONGO_PORT
 MONGO_HOST
 MONGO_DATABASE_NAME
 ```
+
+It will be needed one .env file in frontend/pixel-ai-frontend/ containing:
+```
+NEXT_PUBLIC_BACKEND_HOST
+NEXT_PUBLIC_BACKEND_PORT
+```

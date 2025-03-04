@@ -4,9 +4,10 @@ import Form from 'next/form';
 import styles from "@/page.module.css";
 
 import { generatePixelArt } from '@/actions/generation';
+import { GenerationModel } from '@/models/generation';
 
 
-const Home = () => {
+const Home = () => {    
     return (
         <div className={ styles.page }>
             <main className={ styles.main }>
