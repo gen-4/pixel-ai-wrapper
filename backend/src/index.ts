@@ -7,7 +7,7 @@ import cors from "cors";
 import { errorHandler } from "./middleware/error_handler";
 
 import { connectToDB } from "./db/mongo";
-import { default as generationRouter } from "./routes/generation-routes";
+import { default as generationRouter } from "./routes/generation_routes";
 
 
 const app = express();

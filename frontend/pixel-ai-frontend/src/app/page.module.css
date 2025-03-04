@@ -1,0 +1,68 @@
+.page {
+    --gray-rgb: 0, 0, 0;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    min-height: 100svh;
+    padding: 80px;
+    gap: 64px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .page {
+        --gray-rgb: 255, 255, 255;
+        --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+        --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+        --button-primary-hover: #ccc;
+        --button-secondary-hover: #1a1a1a;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.title {
+    font-size: 2.4rem;
+}
+
+.canvasInput label {
+    margin-right: 1rem;
+}
+
+.canvasInput span {
+    margin-right: .2rem;
+    margin-left: .4rem;
+}
+
+.submitWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.prompt {
+    padding: 1rem;
+    font-family: var(--font-tiny5);
+}
+
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+ 
+}
+
+@media (max-width: 600px) {
+ 
+}
+
+@media (prefers-color-scheme: dark) {
+ 
+}
